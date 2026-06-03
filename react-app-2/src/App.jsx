@@ -1,5 +1,10 @@
 import { useState ,useCallback, useMemo} from "react";
 import { ChildArea } from "./ClildArea";
+import { InlineStyle } from "./components/InlineStyle";
+import { CssModule } from "./components/CssModule";
+import { StyledJsx } from "./components/StyledJsx";
+import { StyledComponets } from "./components/StyledComponets";
+// import { Emotin } from "./components/Emotion";
 
 export const App = () => {
   const [text, setText] = useState("");
@@ -25,6 +30,11 @@ console.log(tmp);
       <button onClick={onClickOpen}>表示</button>
       {/* 子コンポーネントの再レンダリングの抑止 */}
       <ChildArea open={open} onClickClose={onClickClose} />
+      <InlineStyle/>
+      <CssModule/>
+      <StyledJsx/>
+      <StyledComponets/>
+      {/* <Emotin/> */}
     </>
   );
 };
